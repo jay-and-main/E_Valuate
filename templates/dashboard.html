@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+E_Valuate
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>E_Valuate</title>
+</head>
+<body>
+  <div class="Question1">
+    <b><i>Q1)Translate "mon nom est" to English:</i><b>
+  </div>
+<div class="v1"></div>
+  <div class="content">
+    <form action="/display" method="POST"
+         enctype="multipart/form-data">
+         <input type="file" name="file" />
+         <br><br>
+         <div class="sub">
+           <input type="submit"/>
+         </div>
+         <div class="res">
+           <input type = "reset"/>
+         </div>
+    </form>
+  </div>
+</body>
+</html>
+{% endblock %}

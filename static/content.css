@@ -1,0 +1,10 @@
+body{
+  background-image: url(/static/bg.jpg);
+}
+.content{
+  font-family: sans-serif;
+  position: absolute;
+  font-size: 20px;
+  top: 20%;
+  right: 45%;
+}
